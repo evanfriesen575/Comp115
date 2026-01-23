@@ -18,7 +18,7 @@ Understanding the following three examples is beneficial for you to move to the 
 # Example 1 - Draw 10 steps with each step 20 pixels by 20 pixels.
 # num_steps = 10
 alex = turtle.Turtle()
-alex.speed(5)  # 1 sets the drawing speed as the slowest.
+alex.speed(1)  # 1 sets the drawing speed as the slowest.
 # for _ in range(num_steps): # _ means this loop variable is unused, just repeat loop body num_steps times
 #     alex.forward(20) # 20 pixels
 #     alex.left(90) # Angle
@@ -73,7 +73,17 @@ num_sides = 6
 exterior_angle = 360 / num_sides
 '''
 
-# Code your exe 1 here
+alex.up() 
+alex.goto(0, 0) 
+alex.clear()
+num_sides = 6
+side_length = 80
+exterior_angle = 360 / num_sides
+for _ in range(6):
+    alex.down()
+    alex.forward(side_length)
+    alex.left(exterior_angle)
+alex.shape("blank")
 
 
 
@@ -147,6 +157,7 @@ alex.circle(-radius, 180)
 alex.backward()
 '''
 
+alex.clear()
 num_semicircles = 7
 rainbow_colors = ["violet", "indigo", "blue",
                    "green", "yellow", "orange", "red"]
